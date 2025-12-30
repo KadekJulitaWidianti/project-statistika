@@ -47,6 +47,7 @@ Untuk mereproduksi hasil analisis ini, ikuti langkah-langkah berikut:
 
 ### 5.1. Statistik Deskriptif
 > Analisis statistik deskriptif pada bagian ini difokuskan pada variabel Pendapatan_Tahunan_Miliar_IDR sebagai variabel utama penelitian.
+
 - **Ukuran Pemusatan (Mean, Median, Modus):**
   - *Ringkasan:* Ukuran pemusatan data terhadap variabel Pendapatan_Tahunan_Miliar_IDR dari 650 startup SaaS menunjukkan nilai mean sebesar 31,88 miliar IDR, median 31,3 miliar IDR, dan modus 1,87 miliar IDR.
   - *Interpretasi:*
@@ -55,42 +56,72 @@ Untuk mereproduksi hasil analisis ini, ikuti langkah-langkah berikut:
 - **Ukuran Sebaran (Standar Deviasi, Range, Kuartil):**
   - *Ringkasan:* Pendapatan startup SaaS menunjukkan variasi yang signifikan dengan standar deviasi sebesar 19,79 miliar IDR dan rentang yang lebar dari 1 hingga 66,89 miliar IDR (selisih 65,89 miliar IDR). Distribusi pendapatan terlihat dari ringkasan lima angka: minimum 1,00 miliar IDR, kuartil pertama 14,31 miliar IDR, median 31,30 miliar IDR, rata-rata 31,88 miliar IDR, kuartil ketiga 49,04 miliar IDR, dan maksimum 66,89 miliar IDR.
   - *Interpretasi:*
-     Nilai standar deviasi yang cukup tinggi menunjukkan bahwa pendapatan startup SaaS sangat beragam dan tidak terkumpul pada satu tingkat tertentu. Artinya, terdapat perbedaan yang jelas antara startup dengan pendapatan rendah, menengah, dan tinggi. Rentang pendapatan yang lebar semakin menegaskan adanya kesenjangan pendapatan yang signifikan dalam startup ini. Berdasarkan ringkasan lima angka, sekitar 25% startup memiliki pendapatan di bawah 14,31 miliar rupiah, yang mencerminkan kelompok startup dengan pendapatan relatif rendah. Di sisi lain, sekitar 25% startup memiliki pendapatan di atas 49,04 miliar rupiah, yang menunjukkan kelompok startup dengan pendapatan tinggi. Sementara itu, 50% startup lainnya berada di antara kedua nilai tersebut, dengan pendapatan yang terkonsentrasi di sekitar nilai median, yaitu sekitar 31 miliar rupiah per tahun. Secara keseluruhan, hasil ini menunjukkan bahwa kondisi startup SaaS ini memiliki kesenjangan pendapatan yang cukup besar. Terdapat kelompok startup dengan pendapatan rendah, kelompok menengah yang relatif stabil, dan kelompok kecil startup dengan pendapatan sangat tinggi. Oleh karena itu, meskipun rata-rata pendapatan industri terlihat cukup besar, nilai tersebut tidak sepenuhnya mencerminkan kondisi seluruh startup. Pemahaman terhadap penyebaran data ini penting agar analisis lanjutan tidak hanya bergantung pada nilai rata-rata, tetapi juga mempertimbangkan variasi dan kesenjangan yang ada.
+     Nilai standar deviasi yang cukup tinggi menunjukkan bahwa pendapatan startup SaaS sangat beragam dan tidak terkumpul pada satu tingkat tertentu. Artinya, terdapat perbedaan yang jelas antara startup dengan pendapatan rendah, menengah, dan tinggi. Rentang pendapatan yang lebar semakin menegaskan adanya kesenjangan pendapatan yang signifikan dalam startup ini. Berdasarkan ringkasan lima angka, sekitar 25% startup memiliki pendapatan di bawah 14,31 miliar rupiah, yang mencerminkan kelompok startup dengan pendapatan relatif rendah. Di sisi lain, sekitar 25% startup memiliki pendapatan di atas 49,04 miliar rupiah, yang menunjukkan kelompok startup dengan pendapatan tinggi. Sementara itu, 50% startup lainnya berada di antara kedua nilai tersebut, dengan nilai tengah pendapatan berada pada sekitar 31 miliar rupiah per tahun. Secara keseluruhan, hasil ini menunjukkan bahwa kondisi startup SaaS ini memiliki kesenjangan pendapatan yang cukup besar. Terdapat kelompok startup dengan pendapatan rendah, kelompok menengah yang relatif stabil, dan kelompok kecil startup dengan pendapatan sangat tinggi. Oleh karena itu, meskipun rata-rata pendapatan industri terlihat cukup besar, nilai tersebut tidak sepenuhnya mencerminkan kondisi seluruh startup. Pemahaman terhadap penyebaran data ini penting agar analisis lanjutan tidak hanya bergantung pada nilai rata-rata, tetapi juga mempertimbangkan variasi dan kesenjangan yang ada.
     
-- **Visualisasi (Histogram/Boxplot):**
+- **Visualisasi Histogram:**
   - *Sematkan gambar plot dari folder /results...*
   - *Interpretasi:*
-    Berdasarkan boxplot dan histogram, pendapatan tahunan startup SaaS menunjukkan penyebaran yang cukup lebar. Boxplot memperlihatkan bahwa setengah dari data berada pada rentang yang luas, menandakan adanya perbedaan pendapatan yang cukup besar antar startup. Rentang nilai yang panjang ke arah pendapatan tinggi menunjukkan bahwa sebagian startup memiliki pendapatan jauh lebih besar dibandingkan mayoritas lainnya.
+    Histogram distribusi pendapatan tahunan startup SaaS menunjukkan bahwa nilai pendapatan tersebar dari tingkat yang rendah hingga tinggi, tanpa terpusat pada satu nilai tertentu. Garis putus-putus hitam pada grafik menandai nilai mean sebesar 31,88 miliar IDR, yang berada di sekitar tengah sebaran data dan sangat dekat dengan nilai median sebesar 31,3 miliar IDR. Kedekatan antara nilai mean dan median ini menunjukkan bahwa distribusi pendapatan tidak terlalu dipengaruhi oleh nilai ekstrem dan relatif seimbang.
+    Meskipun demikian, histogram memperlihatkan bahwa frekuensi startup dengan pendapatan rendah hingga menengah relatif lebih tinggi dibandingkan startup dengan pendapatan tinggi. Hal ini ditunjukkan oleh kepadatan batang histogram pada sisi kiri hingga tengah distribusi, serta nilai modus yang berada pada kisaran pendapatan rendah. Kondisi tersebut mengindikasikan bahwa sebagian besar startup masih berada pada tahap pendapatan yang relatif kecil hingga menengah.
+  Secara keseluruhan, histogram memperlihatkan bahwa pendapatan startup SaaS belum merata. Sebagian besar startup masih berada pada level pendapatan rendah hingga menengah, sementara hanya sebagian kecil startup dengan pendapatan tinggi yang mendorong nilai rata-rata menjadi lebih besar. Pola ini menegaskan adanya kesenjangan pendapatan dalam startup SaaS, meskipun distribusi data secara umum tidak menunjukkan kemiringan yang ekstrem atau sebaran data yang tidak merata.
+    
 
-    Histogram mendukung temuan tersebut dengan menunjukkan bahwa pendapatan tahunan startup SaaS tersebar dari nilai yang rendah hingga tinggi, tanpa terpusat pada satu nilai tertentu. Garis putus-putus hitam pada grafik menandai nilai mean sebesar 31,88 miliar IDR, yang berada di sekitar tengah sebaran data. Hal ini sejalan dengan nilai median sebesar 31,3 miliar IDR yang hampir sama, menunjukkan bahwa distribusi pendapatan tidak terlalu dipengaruhi oleh nilai ekstrem. Meskipun demikian, nilai modus sebesar 1,87 miliar IDR berada jauh di sisi kiri distribusi, yang mengindikasikan bahwa pendapatan yang paling sering muncul dalam data berada pada tingkat yang relatif rendah. Kondisi ini terlihat pada histogram, di mana frekuensi startup dengan pendapatan rendah hingga menengah lebih banyak dibandingkan startup dengan pendapatan tinggi.Secara keseluruhan, histogram memperlihatkan bahwa pendapatan startup SaaS belum merata. Sebagian besar startup masih berada pada level pendapatan rendah hingga menengah, sementara hanya sebagian kecil startup dengan pendapatan tinggi yang mendorong nilai rata-rata menjadi lebih besar. Pola ini menegaskan adanya kesenjangan pendapatan dalam startup SaaS, meskipun distribusi data secara umum tidak menunjukkan kemiringan yang ekstrem atau sebaran data yang tidak merata.
-
+    
+- **Visualisasi Boxplot:**
+  - *Sematkan gambar plot dari folder /results...*
+  - *Interpretasi:*
+    Berdasarkan boxplot pendapatan tahunan startup SaaS, nilai median pendapatan berada pada sekitar 31,30 miliar rupiah per tahun, yang menunjukkan bahwa 50% startup memiliki pendapatan di bawah nilai tersebut dan 50% lainnya berada di atasnya. Sebaran data pendapatan ditunjukkan oleh rentang range dari 1 hingga 66,89 miliar IDR (selisih 65,89 miliar IDR), dengan kuartil pertama (Q1) sebesar 14,31 miliar rupiah dan kuartil ketiga (Q3) sebesar 49,04 miliar rupiah. Hal ini berarti bahwa 50% startup berada pada rentang pendapatan antara 14,31 hingga 49,04 miliar rupiah per tahun, yang merupakan kelompok tengah dari keseluruhan data.
+    
+    Sementara itu, 50% startup lainnya berada di luar rentang tersebut, yaitu:
+    - 25% startup memiliki pendapatan tahunan di bawah 14,31 miliar rupiah, yang mencerminkan kelompok startup dengan pendapatan relatif rendah, dan
+    - 25% startup memiliki pendapatan tahunan di atas 49,04 miliar rupiah, yang menunjukkan kelompok startup dengan pendapatan relatif tinggi.
+      
+    Selain itu, rentang pendapatan secara keseluruhan cukup lebar, yaitu dari sekitar 1 miliar hingga 66,89 miliar rupiah per tahun, yang mengindikasikan adanya kesenjangan pendapatan yang cukup besar antar startup SaaS yang diamati. Secara keseluruhan, boxplot ini menunjukkan bahwa pendapatan tahunan startup SaaS memiliki variasi yang tinggi, dengan perbedaan yang jelas antara kelompok startup berpendapatan rendah, menengah, dan tinggi.
+  
 
 ### 5.2. Uji Normalitas
+> Uji normalitas dilakukan terhadap variabel Pendapatan_Tahunan_Miliar_IDR, karena variabel ini menjadi dasar dalam analisis korelasi dan regresi selanjutnya.
+
 - **Hasil Uji Shapiro-Wilk:**
-  - *Nilai p-value...*
-  - *Interpretasi:* Apakah data Anda terdistribusi normal berdasarkan hasil uji? Apa implikasinya?
+  - *Nilai p-value:* sebesar 1,497 × 10⁻¹⁴
+  - *Interpretasi:*
+    Nilai p-value yang jauh lebih kecil dari tingkat signifikansi 0,05 menunjukkan bahwa data pendapatan tahunan tidak terdistribusi normal. Hal ini berarti sebaran data tidak membentuk pola simetris seperti distribusi normal dan kemungkinan dipengaruhi oleh perbedaan pendapatan yang cukup besar antar startup, termasuk adanya beberapa nilai pendapatan yang sangat tinggi dibandingkan mayoritas data lainnya. Ketidaknormalan distribusi data ini memiliki implikasi penting terhadap metode analisis yang digunakan pada tahap selanjutnya, yaitu analisis korelasi. Dalam analisis korelasi untuk project ini digunakan dua metode yaitu metode Pearson dan Spearman. Karena korelasi dengan metode Pearson mensyaratkan data berdistribusi normal, maka metode tersebut tidak sesuai untuk digunakan pada data ini. Oleh karena itu, analisis korelasi dalam proyek ini menggunakan korelasi dengan metode Spearman, yang tidak bergantung pada asumsi normalitas dan lebih stabil terhadap distribusi data yang tidak simetris serta keberadaan nilai ekstrem. Pemilihan metode ini bertujuan untuk menghasilkan analisis hubungan antar variabel yang lebih akurat dan representatif sesuai dengan karakteristik data pendapatan startup SaaS.
+    
 - **Plot Q-Q:**
   - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah titik-titik data mengikuti garis lurus? Apa artinya?
-
+  - *Interpretasi:*
+    Berdasarkan Q-Q Plot variabel Pendapatan_Tahunan_Miliar_IDR, terlihat bahwa sebagian besar titik data tidak mengikuti garis diagonal secara konsisten. Pada bagian tengah, beberapa titik masih mendekati garis, namun pada bagian awal dan terutama bagian akhir, titik-titik mulai menyimpang cukup jauh dari garis lurus/garis diagonal. Penyimpangan yang jelas di sisi kanan menunjukkan adanya nilai pendapatan yang sangat tinggi dibandingkan mayoritas data. Pola ini menandakan bahwa distribusi data tidak simetris dan memiliki ekor kanan yang panjang (right-skewed). Dengan kata lain, terdapat sejumlah startup dengan pendapatan jauh lebih besar yang menyebabkan bentuk distribusi menyimpang dari distribusi normal. Hasil visual ini sejalan dengan temuan pada uji Shapiro-Wilk yang menyatakan bahwa data tidak terdistribusi normal. Sehingga hal ini akan mempengaruhi analisis selanjutnya yaitu analisis korelasi yang lebih tepat menggunakan metode Spearman karena distribusi data yang tidak normal.
+    
 ### 5.3. Analisis Korelasi
+> Pada tahap analisis korelasi ini, fokus analisis diarahkan pada hubungan antara Nilai_Pelanggan_Juta_IDR dan Pendapatan_Tahunan_Miliar_IDR. Pemilihan kedua variabel ini didasarkan pada asumsi bahwa nilai ekonomi pelanggan memiliki keterkaitan langsung dengan pendapatan yang dihasilkan oleh startup SaaS. Mengingat hasil uji normalitas menunjukkan bahwa data pendapatan tidak terdistribusi normal, maka metode korelasi yang digunakan dalam analisis ini adalah korelasi Spearman.
+
 - **Nilai Koefisien Korelasi:**
-  - *Nilai r...*
-  - *Interpretasi:* Seberapa kuat dan apa arah hubungan antara dua variabel yang Anda uji? (misalnya, korelasi positif kuat, negatif lemah, atau tidak ada korelasi).
+  - *Nilai r:* 0,997  
+  - *Interpretasi:*
+    Nilai koefisien korelasi sebesar 0,997 menunjukkan hubungan yang **sangat kuat dan positif** antara variabel Nilai_Pelanggan_Juta_IDR dan Pendapatan_Tahunan_Miliar_IDR. Artinya, semakin tinggi nilai pelanggan, semakin besar pula pendapatan tahunan startup.
+    
 - **Visualisasi (Scatter Plot):**
   - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah pola pada scatter plot mendukung hasil koefisien korelasi?
-
+  - *Interpretasi:*
+    Scatter plot antara Nilai_Pelanggan_Juta_IDR dan Pendapatan_Tahunan_Miliar_IDR menunjukkan pola titik yang membentuk tren menaik yang jelas. Titik-titik data tidak tersebar secara acak, melainkan cenderung berkumpul dan mengikuti arah kenaikan yang konsisten, yang menunjukkan bahwa peningkatan nilai pelanggan diikuti oleh peningkatan pendapatan tahunan. Meskipun analisis korelasi menggunakan metode Spearman, yang mengukur hubungan monotonik berdasarkan peringkat data dan tidak mensyaratkan hubungan linear sempurna, garis tren linear (lm) tetap ditampilkan pada scatter plot sebagai alat bantu visual untuk memperjelas arah umum hubungan antarvariabel. Garis ini tidak digunakan dalam perhitungan korelasi, tetapi membantu menunjukkan bahwa hubungan kedua variabel bersifat positif dan stabil.Kesesuaian antara pola visual pada scatter plot dan nilai koefisien korelasi Spearman yang tinggi memperkuat kesimpulan bahwa semakin tinggi nilai pelanggan, semakin besar pendapatan tahunan startup SaaS.
+    
 ### 5.4. Analisis Regresi
+
 - **Model Regresi:**
   - *Persamaan regresi: Y = b0 + b1*X*
-  - *Interpretasi:* Jelaskan arti dari koefisien intercept (b0) dan slope (b1) dalam konteks data Anda.
+    Persamaan regresi: Pendapatan_Tahunan_Miliar_IDR = −0,99 + 0,33 × Nilai_Pelanggan_Juta_IDR
+  - *Interpretasi:*
+    Koefisien slope (b1) sebesar 0,33 menunjukkan bahwa setiap kenaikan 1 juta rupiah nilai pelanggan diperkirakan akan meningkatkan pendapatan tahunan sebesar 0,33 miliar rupiah. Hal ini mengindikasikan adanya hubungan positif dan searah antara nilai pelanggan dan pendapatan, di mana peningkatan nilai pelanggan berkontribusi langsung terhadap peningkatan pendapatan perusahaan.Sementara itu, nilai intercept (b0) sebesar −0,99 menunjukkan titik potong model regresi pada sumbu pendapatan saat nilai pelanggan bernilai nol. Nilai ini tidak diinterpretasikan secara langsung secara bisnis, tetapi diperlukan secara matematis untuk membentuk model regresi.
+    
 - **Evaluasi Model (R-squared):**
-  - *Nilai R-squared...*
-  - *Interpretasi:* Berapa persen variasi dari variabel dependen yang dapat dijelaskan oleh model regresi Anda?
+  - *Nilai R-squared:* 0,994 (99,4%)
+  - *Interpretasi:*
+    Nilai R-squared sebesar 0,994 menunjukkan bahwa model regresi linear mampu menjelaskan sekitar 99,4% variasi pendapatan tahunan startup SaaS berdasarkan nilai pelanggan. Hal ini menandakan bahwa nilai pelanggan memiliki pengaruh yang sangat kuat terhadap pendapatan dalam model yang digunakan, sementara hanya sebagian kecil variasi pendapatan yang dijelaskan oleh faktor lain di luar model.
+    
 - **Visualisasi (Garis Regresi pada Scatter Plot):**
   - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Jelaskan bagaimana garis regresi merepresentasikan hubungan antara variabel.
+  - *Interpretasi:*
+    Grafik menunjukkan adanya hubungan linear positif yang sangat kuat antara nilai pelanggan dan pendapatan tahunan startup SaaS. Titik-titik data sebagian besar berada sangat dekat dengan garis regresi, yang menandakan bahwa model regresi mampu merepresentasikan hubungan kedua variabel dengan baik. Garis regresi yang menanjak menunjukkan bahwa semakin tinggi nilai pelanggan, semakin tinggi pula pendapatan tahunan yang dihasilkan. Nilai Adjusted R-squared sebesar 0,994 memperkuat temuan ini, karena menunjukkan bahwa hampir seluruh variasi pendapatan tahunan dapat dijelaskan oleh variasi nilai pelanggan dalam model. Penyimpangan titik data dari garis regresi relatif kecil, sehingga kesalahan prediksi model tergolong rendah. Secara keseluruhan, grafik ini menegaskan bahwa nilai pelanggan dapat menjelaskan hampir keseluruhan variasi pendapatan tahunan. 
 
 ---
 
