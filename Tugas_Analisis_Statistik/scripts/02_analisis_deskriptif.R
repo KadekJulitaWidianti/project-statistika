@@ -73,11 +73,31 @@ print(summary_value)
 # A. Histogram
 # Histogram membantu melihat bentuk distribusi data.
 hist_plot <- ggplot(data_bersih, aes_string(x = kolom_analisis)) +
-  geom_histogram(bins = 20, fill = "yellow", color = "white") +
-  geom_vline(aes(xintercept = mean_value), color = "black", linetype = "dashed", size = 1) +
+  geom_histogram(
+    bins = 20,
+    fill = "aquamarine",
+    color = "black"
+  ) +
+  # Garis Mean
+  geom_vline(
+    xintercept = mean_value,
+    color = "black",
+    linetype = "dashed",
+    size = 1
+  ) +
+  # Garis Median
+  geom_vline(
+    xintercept = median_value,
+    color = "red",
+    linetype = "solid",
+    size = 1
+  ) +
   labs(
-    title = paste("Histogram dari", kolom_analisis),
-    subtitle = paste("Garis hitam putus-putus menunjukkan Mean =", round(mean_value, 2)),
+    title = paste("Histogram Distribusi", kolom_analisis),
+    subtitle = paste(
+      "Garis hitam putus-putus menunjukkan Mean =", round(mean_value, 2),
+      "| Garis merah menunjukkan Median =", round(median_value, 2)
+    ),
     x = kolom_analisis,
     y = "Frekuensi"
   ) +
@@ -97,14 +117,45 @@ print(paste("Histogram disimpan di folder 'results' dengan nama histogram_", kol
 
 # B. Boxplot
 # Boxplot berguna untuk mengidentifikasi pencilan (outliers) dan melihat sebaran kuartil.
-box_plot <- ggplot(data_bersih, aes_string(y = kolom_analisis)) +
-  geom_boxplot(fill = "cyan2", color = "black") +
-  labs(
-    title = paste("Boxplot dari", kolom_analisis),
-    y = kolom_analisis
-  ) +
-  theme_minimal()
+# Hitung statistik
+q1 <- quantile(data_bersih[[kolom_analisis]], 0.25, na.rm = TRUE)
+median_val <- median(data_bersih[[kolom_analisis]], na.rm = TRUE)
+q3 <- quantile(data_bersih[[kolom_analisis]], 0.75, na.rm = TRUE)
+min_val <- min(data_bersih[[kolom_analisis]], na.rm = TRUE)
+max_val <- max(data_bersih[[kolom_analisis]], na.rm = TRUE)
+range_val <- max_val - min_val
 
+# Membuat Boxplot
+box_plot <- ggplot(data_bersih, aes(x = "", y = .data[[kolom_analisis]])) +
+  geom_boxplot(
+    fill = "coral",
+    color = "black",
+    outlier.color = "black",
+    outlier.size = 2
+  ) +
+  annotate("text",
+           x = 1,
+           y = c(q1, median_val, q3),
+           label = sprintf( 
+             c("Q1: %.2f", "Median: %.2f", "Q3: %.2f"), 
+                           c(q1, median_val, q3)),
+           vjust = c(2, -1, -2),  # Q1 bawah, Median atas, Q3 atas
+           size = 3.5,
+           fontface = "bold") +
+  labs(
+    title = paste("Boxplot", kolom_analisis),
+    subtitle = paste("Range:", round(min_val, 2), "-", round(max_val, 2),
+                     " (Δ=", round(range_val, 2), ")", sep = ""),
+  
+    y = kolom_analisis,
+    x = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5),
+    axis.text.x = element_blank()
+  )
 print(box_plot)
 
 # Menyimpan boxplot ke folder 'results'
@@ -118,3 +169,4 @@ print(paste("Boxplot disimpan di folder 'results' dengan nama boxplot_", kolom_a
 
 # Pesan akhir
 print("Analisis deskriptif selesai. Interpretasi hasil disajikan pada README.md.")
+
